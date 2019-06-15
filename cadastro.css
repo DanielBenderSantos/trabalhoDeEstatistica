@@ -1,0 +1,37 @@
+html, body 
+{
+background-color: rgba(157, 175, 194, 0.2);
+}
+		p{
+			border: 10px;
+			margin: 10px auto;
+			font-size: 20px;
+			text-align: left;
+		}
+		button{
+			cursor: pointer;			
+			font-size: 30px;
+		}
+		input{   
+			font-size: 20px;
+}
+
+
+   .btn-yellow {
+  background-color: rgb(253,255,181);
+  color: #000;
+  border: solid;
+  border-radius: 20px;
+  border-color:rgb(254,242,122);
+}
+.btn-yellow:hover {
+  background-color:rgb(254,242,122);
+  color: white;
+}
+
+ h1 {
+      color: rgb(113,121,126);
+}
+p{
+color: rgb(113,121,126);
+}

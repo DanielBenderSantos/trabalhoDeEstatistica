@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"  crossorigin="anonymous">
+  <script src="descritiva.js"></script>
+  <link rel="stylesheet" href="descritiva.css">
+</head>
+<body >
+ <div class="content" >
+  <div>
+    <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+      <button class= "navbar-toggler type=button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"> Home <span class="fas fa-home"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+      </li>
+      <li>
+  </ul>
+        <span style="right: 0;">
+          <p id="nomeInvisivel" style="float:left;" ></p>
+          <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="index.html" class="btn btn-yellow "> Sair </button>
+          <a> <i class="fas fa-square-root-alt"></i></a>
+        </span>
+      </div>
+    </nav>
+    <div  >
+    <div id="body"  >
+        <a href="teste.html" ><button type="button" class="btn btn-secondary btn-sm btn-block">Voltar</button></a>
+      <div id="fundo" class="container-fluid">
+        <br>
+          <h2 style="text-align: center"  >DADOS DESCRITIVOS</h2>
+        <form id="campos">               
+          <div class="form-check"> <!-- Parte selecionavel, utlizando bootstrap, população ou amostra-->
+            
+            <label for="tipodedados"  > Escolha o tipo de dados</label>
+            <br />
+            <input class="form-check-input" type="radio" name="populacao1" id="populacao" value="option1" checked>
+            <label class="form-check-label" for="populacao">
+              População
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="populacao1" id="amostra" value="option2">
+            <label class="form-check-label" for="amostra">
+              Amostra
+            </label>
+          </div>
+          <div class="form-row">
+    <div class="form-group col-md-6 ">
+          <select  class="custom-select custom-select-md btn btn-light" class="btn btn-light"   id="selecionaQ">
+            <label for="variavel"> Tipo de variável</label>
+            <option selected>Tipo da Variavel pesquisada</option>
+            <option value="1">Qualitativa nominal</option>
+            <option value="2">Qualitativa  Ordinal</option>
+            <option value="3">Quantitativa Continua</option>
+            <option value="4">Quantitativa Discreta</option>
+          </select>
+    </div>
+          </div>
+          <div class="form-group"> <!-- Dados e botão de Uploado-->
+            <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+            <label for="dados">Dados</label>
+            <input type="text" class="form-control" id="dados" aria-describedby="dados" placeholder="ex: 22;11;10;5">
+            <span style="position: absolute; right: 18;">
+              <!--Inicio modificação Daniel -->
+              <label class="btn btn-info" for="inputCSV">
+                <input type="file" class="btn btn-outline-info" onchange="pegaCSV(this)"id="inputCSV" accept=".csv , .txt" style="display: none;">
+                Escolher Arquivo
+              </label>
+              </div>
+  </div>
+
+              <!--Fim modificação Daniel -->
+            </span>  
+          </div>
+          <div class="form-group" style="display:none" id="ordemquali"> <!--Nome da variavel-->
+            <div class="form-row">
+    <div class="form-group col-md-6 ">
+            <label for="ordemQ">Ordem dos dados</label>
+            <input type="text" class="form-control" id="ordemQ" placeholder="Ordem ">
+    </div>
+            </div>
+          </div>
+          <div class="form-group"> <!--Nome da variavel-->
+      <br>
+            <div class="form-row">
+    <div class="form-group col-md-6">
+            <label for="NomeV">Nome da variável</label>
+            <input type="text" class="form-control" id="nomeV" placeholder="ex: Salário">
+    </div>
+            </div>
+          </div>
+
+          <div id="separatriz"></div>
+          <div class="form-group ">
+            <div class="form-row">
+    <div class="form-group col-md-6">
+            <label class='MS' for="Separatrizes"> Medida separatriz</label>
+            <select onclick="selected(this.value)" id="Separatrizes" class="custom-select custom-select-md btn btn-light" name="Medidas Separatrizes">
+              <option selected type="checkbox" name="Selecionar"> Selecionar </option>
+              <option value="Quartil" name="Medidas Separatrizes" id="Quartil">Quartil </option>
+              <option value="Kintil" name="Medidas Separatrizes"> Kintil </option>
+              <option value="Decil"   name="Medidas Separatrizes"> Décil  </option>
+              <option value="Porcentil" name="Medidas Separatrizes"> Porcentil </option>
+            </select>
+            <div class="Quartil" style="display:none">
+              Quartil:  25%     <input type="radio" name="Quartil" value="25" id="Q1" onclick="calcularQ()"/>
+              50%     <input type="radio" name="Quartil" value="50" id="Q2" onclick="calcularQ()"/>
+              75%     <input type="radio" name="Quartil" value="75" id="Q3" onclick="calcularQ()"/>
+              100%    <input type="radio" name="Quartil" value="100" id="Q4" onclick="calcularQ()"/>
+            </div>
+            <div class="Kintil" style="display:none">
+              Kintil:     20% <input type="radio" name="Kintil" value="20" id="K1" onclick="calcularQ()"/>
+              40% <input type="radio" name="Kintil" value="40" id="K2" onclick="calcularQ()"/>
+              60% <input type="radio" name="Kintil" value="60" id="K3" onclick="calcularQ()"/>
+              80% <input type="radio" name="Kintil" value="80" id="K4" onclick="calcularQ()"/>
+              100% <input type="radio" name="Kintil" value="100" id="K5" onclick="calcularQ()"/>
+
+            </div>
+            <div class="Decil" style="display:none">
+              Décil:    10% <input type="radio" name="Decil" value="10" id="D1" onclick="calcularQ()"/>
+              20% <input type="radio" name="Decil" value="20" id="D2" onclick="calcularQ()"/>
+              30% <input type="radio" name="Decil" value="30" id="D3" onclick="calcularQ()"/>
+              40% <input type="radio" name="Decil" value="40" id="D4" onclick="calcularQ()"/>
+              50% <input type="radio" name="Decil" value="50" id="D5" onclick="calcularQ()"/>
+              60% <input type="radio" name="Decil" value="60" id="D6" onclick="calcularQ()"/>
+              70% <input type="radio" name="Decil" value="70" id="D7" onclick="calcularQ()"/>
+              80% <input type="radio" name="Decil" value="80" id="D8" onclick="calcularQ()"/>
+              90% <input type="radio" name="Decil" value="90" id="D9" onclick="calcularQ()"/>
+              100% <input type="radio" name="Decil" value="100" id="D10" onclick="calcularQ()"/>
+            </div>
+            <div class="Porcentil" style="display:none">
+              Porcentil:  1% <input type="radio" name="Porcentil" value="1" id="P1" onclick="calcularQ()"/>
+              2% <input type="radio" name="Porcentil" value="2" id="P2" onclick="calcularQ()"/>
+              3% <input type="radio" name="Porcentil" value="3" id="P3" onclick="calcularQ()"/>
+              4% <input type="radio" name="Porcentil" value="4" id="P4" onclick="calcularQ()"/>
+              5% <input type="radio" name="Porcentil" value="5" id="P5" onclick="calcularQ()"/>
+              6% <input type="radio" name="Porcentil" value="6" id="P6" onclick="calcularQ()"/>
+              7% <input type="radio" name="Porcentil" value="7" id="P7" onclick="calcularQ()"/>
+              8% <input type="radio" name="Porcentil" value="8" id="P8" onclick="calcularQ()"/>
+              9% <input type="radio" name="Porcentil" value="9" id="P9" onclick="calcularQ()"/>
+              10% <input type="radio" name="Porcentil" value="10" id="P10" onclick="calcularQ()"/>
+
+              <br/>
+              11% <input type="radio" name="Porcentil" value="11" id="P11" onclick="calcularQ()"/>
+              12% <input type="radio" name="Porcentil" value="12" id="P12" onclick="calcularQ()"/>
+              13% <input type="radio" name="Porcentil" value="13" id="P13" onclick="calcularQ()"/>
+              14% <input type="radio" name="Porcentil" value="14" id="P14" onclick="calcularQ()"/>
+              15% <input type="radio" name="Porcentil" value="15" id="P15" onclick="calcularQ()"/>
+              16% <input type="radio" name="Porcentil" value="16" id="P16" onclick="calcularQ()"/>
+              17% <input type="radio" name="Porcentil" value="17" id="P17" onclick="calcularQ()"/>
+              18% <input type="radio" name="Porcentil" value="18" id="P18" onclick="calcularQ()"/>
+              19% <input type="radio" name="Porcentil" value="19" id="P19" onclick="calcularQ()"/>
+              20% <input type="radio" name="Porcentil" value="20" id="P20" onclick="calcularQ()"/>
+              <br/>
+              21% <input type="radio" name="Porcentil" value="21" id="P21" onclick="calcularQ()"/>
+              22% <input type="radio" name="Porcentil" value="22" id="P22" onclick="calcularQ()"/>
+              23% <input type="radio" name="Porcentil" value="23" id="P23" onclick="calcularQ()"/>
+              24% <input type="radio" name="Porcentil" value="24" id="P24" onclick="calcularQ()"/>
+              25% <input type="radio" name="Porcentil" value="25" id="P25" onclick="calcularQ()"/>
+              26% <input type="radio" name="Porcentil" value="26" id="P26" onclick="calcularQ()"/>
+              27% <input type="radio" name="Porcentil" value="27" id="P27" onclick="calcularQ()"/>
+              28% <input type="radio" name="Porcentil" value="28" id="P28" onclick="calcularQ()"/>
+              29% <input type="radio" name="Porcentil" value="29" id="P29" onclick="calcularQ()"/>
+              30% <input type="radio" name="Porcentil" value="30" id="P30" onclick="calcularQ()"/>
+              <br/>
+              31% <input type="radio" name="Porcentil" value="31" id="P31" onclick="calcularQ()"/>
+              32% <input type="radio" name="Porcentil" value="32" id="P32" onclick="calcularQ()"/>
+              33% <input type="radio" name="Porcentil" value="33" id="P33" onclick="calcularQ()"/>
+              34% <input type="radio" name="Porcentil" value="34" id="P34" onclick="calcularQ()"/>
+              35% <input type="radio" name="Porcentil" value="35" id="P35" onclick="calcularQ()"/>
+              36% <input type="radio" name="Porcentil" value="36" id="P36" onclick="calcularQ()"/>
+              37% <input type="radio" name="Porcentil" value="37" id="P37" onclick="calcularQ()"/>
+              38% <input type="radio" name="Porcentil" value="38" id="P38" onclick="calcularQ()"/>
+              39% <input type="radio" name="Porcentil" value="39" id="P39" onclick="calcularQ()"/>
+              40% <input type="radio" name="Porcentil" value="40" id="P40" onclick="calcularQ()"/>
+              <br/>
+              41% <input type="radio" name="Porcentil" value="41" id="P41" onclick="calcularQ()"/>
+              42% <input type="radio" name="Porcentil" value="42" id="P42" onclick="calcularQ()"/>
+              43% <input type="radio" name="Porcentil" value="43" id="P43" onclick="calcularQ()"/>
+              44% <input type="radio" name="Porcentil" value="44" id="P44" onclick="calcularQ()"/>
+              45% <input type="radio" name="Porcentil" value="45" id="P45" onclick="calcularQ()"/>
+              46% <input type="radio" name="Porcentil" value="46" id="P46" onclick="calcularQ()"/>
+              47% <input type="radio" name="Porcentil" value="47" id="P47" onclick="calcularQ()"/>
+              48% <input type="radio" name="Porcentil" value="48" id="P48" onclick="calcularQ()"/>
+              49% <input type="radio" name="Porcentil" value="49" id="P49" onclick="calcularQ()"/>
+              50% <input type="radio" name="Porcentil" value="50" id="P50" onclick="calcularQ()"/>
+              <br/>
+              51% <input type="radio" name="Porcentil" value="51" id="P51" onclick="calcularQ()"/>
+              52% <input type="radio" name="Porcentil" value="52" id="P52" onclick="calcularQ()"/>
+              53% <input type="radio" name="Porcentil" value="53" id="P53" onclick="calcularQ()"/>
+              54% <input type="radio" name="Porcentil" value="54" id="P54" onclick="calcularQ()"/>
+              55% <input type="radio" name="Porcentil" value="55" id="P55" onclick="calcularQ()"/>
+              56% <input type="radio" name="Porcentil" value="56" id="P56" onclick="calcularQ()"/>
+              57% <input type="radio" name="Porcentil" value="57" id="P57" onclick="calcularQ()"/>
+              58% <input type="radio" name="Porcentil" value="58" id="P58" onclick="calcularQ()"/>
+              59% <input type="radio" name="Porcentil" value="59" id="P59" onclick="calcularQ()"/>
+              60% <input type="radio" name="Porcentil" value="60" id="P60" onclick="calcularQ()"/>
+              <br/>
+              61% <input type="radio" name="Porcentil" value="61" id="P61" onclick="calcularQ()"/>
+              62% <input type="radio" name="Porcentil" value="62" id="P62" onclick="calcularQ()"/>
+              63% <input type="radio" name="Porcentil" value="63" id="P63" onclick="calcularQ()"/>
+              64% <input type="radio" name="Porcentil" value="64" id="P64" onclick="calcularQ()"/>
+              65% <input type="radio" name="Porcentil" value="65" id="P65" onclick="calcularQ()"/>
+              66% <input type="radio" name="Porcentil" value="66" id="P66" onclick="calcularQ()"/>
+              67% <input type="radio" name="Porcentil" value="67" id="P67" onclick="calcularQ()"/>
+              68% <input type="radio" name="Porcentil" value="68" id="P68" onclick="calcularQ()"/>
+              69% <input type="radio" name="Porcentil" value="69" id="P69" onclick="calcularQ()"/>
+              70% <input type="radio" name="Porcentil" value="70" id="P70" onclick="calcularQ()"/>
+              <br/>
+              71% <input type="radio" name="Porcentil" value="71" id="P71" onclick="calcularQ()"/>
+              72% <input type="radio" name="Porcentil" value="72" id="P72" onclick="calcularQ()"/>
+              73% <input type="radio" name="Porcentil" value="73" id="P73" onclick="calcularQ()"/>
+              74% <input type="radio" name="Porcentil" value="74" id="P74" onclick="calcularQ()"/>
+              75% <input type="radio" name="Porcentil" value="75" id="P75" onclick="calcularQ()"/>
+              76% <input type="radio" name="Porcentil" value="76" id="P76" onclick="calcularQ()"/>
+              77% <input type="radio" name="Porcentil" value="77" id="P77" onclick="calcularQ()"/>
+              78% <input type="radio" name="Porcentil" value="78" id="P78" onclick="calcularQ()"/>
+              79% <input type="radio" name="Porcentil" value="79" id="P79" onclick="calcularQ()"/>
+              80% <input type="radio" name="Porcentil" value="80" id="P80" onclick="calcularQ()"/>
+              <br/>
+              81% <input type="radio" name="Porcentil" value="81" id="P81" onclick="calcularQ()"/>
+              82% <input type="radio" name="Porcentil" value="82" id="P82" onclick="calcularQ()"/>
+              83% <input type="radio" name="Porcentil" value="83" id="P83" onclick="calcularQ()"/>
+              84% <input type="radio" name="Porcentil" value="84" id="P84" onclick="calcularQ()"/>
+              85% <input type="radio" name="Porcentil" value="85" id="P85" onclick="calcularQ()"/>
+              86% <input type="radio" name="Porcentil" value="86" id="P86" onclick="calcularQ()"/>
+              87% <input type="radio" name="Porcentil" value="87" id="P87" onclick="calcularQ()"/>
+              88% <input type="radio" name="Porcentil" value="88" id="P88" onclick="calcularQ()"/>
+              89% <input type="radio" name="Porcentil" value="89" id="P89" onclick="calcularQ()"/>
+              90% <input type="radio" name="Porcentil" value="90" id="P90" onclick="calcularQ()"/> 
+              <br/>
+              91% <input type="radio" name="Porcentil" value="91" id="P91" onclick="calcularQ()"/>
+              92% <input type="radio" name="Porcentil" value="92" id="P92" onclick="calcularQ()"/>
+              93% <input type="radio" name="Porcentil" value="93" id="P93" onclick="calcularQ()"/>
+              94% <input type="radio" name="Porcentil" value="94" id="P94" onclick="calcularQ()"/>
+              95% <input type="radio" name="Porcentil" value="95" id="P95" onclick="calcularQ()"/>
+              96% <input type="radio" name="Porcentil" value="96" id="P96" onclick="calcularQ()"/>
+              97% <input type="radio" name="Porcentil" value="97" id="P97" onclick="calcularQ()"/>
+              98% <input type="radio" name="Porcentil" value="98" id="P98" onclick="calcularQ()"/>
+              99% <input type="radio" name="Porcentil" value="99" id="P99" onclick="calcularQ()"/>
+              100% <input type="radio" name="Porcentil" value="100" id="P100" onclick="calcularQ()"/>      
+            </div>
+          </div>
+        </div>
+          </div>
+      </div>
+        <div class='submit container-fluid' id="calcular"> 
+          <button type="submit" class="btn btn-info btn-md" id="grafico">Calcular</button> 
+          <h2 style="text-align: center"  >RESULTADOS</h2>
+          <br>
+        </div>
+      </div>
+    </form>
+    <div id="azul">
+    <div id="tabela" class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>   </th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="tresm"> 
+      
+      </div>
+      <div id="desvio">
+       
+      </div>
+      <div id="cv">
+       
+      </div>
+      <div id="til">
+      </div>
+    </div>
+  </div>
+  <div id="chart-container" style="width:600px; height:300px; margin-right: auto;margin-left:auto">
+    <canvas id="myChart"></canvas> 
+  </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

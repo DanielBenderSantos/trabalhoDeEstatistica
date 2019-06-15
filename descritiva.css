@@ -1,0 +1,96 @@
+html, body 
+{
+background-color: rgba(157, 175, 194, 0.2);
+}
+
+    #tabela{
+      display: none;
+    }
+    .table {
+		margin-bottom: 0;
+	}
+	.table th {
+		border-top: none;
+
+	}
+  #medida{
+    margin-top: 8px;
+  }
+  #separatriz{
+    border-top:-10px;
+
+  }
+  .submit{
+      float:auto;
+      margin-top:-16px;
+      margin-right:0px;
+      margin-left:0px;
+  }
+  .MS {
+    margin-top:8px;
+    margin-left:3px;
+  }
+    #invisivel{
+      display: none;
+    }
+    #visivel{
+      font-style: italic;
+      font-size: 30px;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoVisivel{
+      font-style: italic;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoSair{
+      display: none;
+    }
+
+ 
+
+   .btn-yellow {
+  background-color: rgb(253,255,181);
+  color: #000;
+  border: solid;
+  border-radius: 20px;
+  border-color:rgb(254,242,122);
+}
+.btn-yellow:hover {
+  background-color:rgb(254,242,122);
+  color: white;
+}
+    #invisivel{
+      display: none;
+    }
+    #visivel{
+      font-style: italic;
+      font-size: 30px;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoVisivel{
+      font-style: italic;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoSair{
+      display: none;
+    }
+
+ a:link {
+      color: gainsboro;
+      text-decoration: none;
+    }
+    #fundo{
+      background-color: rgba(157, 175, 194,) ;
+    }
+   #calcular{
+background-color: rgba(157, 175, 194, );
+}
+    a{
+      color:white;
+    }
+
+#azul{
+background-color: rgba(157, 175, 194, );
+}
+#chart-container{
+background-color: rgba(157, 175, 194, );}

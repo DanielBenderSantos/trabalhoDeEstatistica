@@ -1,0 +1,63 @@
+#body {
+      background-image:url("fundo2.jpg");
+   
+    }
+
+    .container-fluid {
+      margin: 0;
+      padding: 0;
+    }
+
+    .divimagem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .divimagem div {
+      background-color: #e3f2fd;
+    }
+
+    .divimagem div h1:hover {
+      color: rgb(113,121,126);
+    }
+
+    .divimagem div p:hover {
+      color: rgb(113,121,126);
+      padding: 4px;
+    }
+   .btn-yellow {
+  background-color: rgb(253,255,181);
+  color: #000;
+  border: solid;
+  border-radius: 20px;
+  border-color:rgb(254,242,122);
+}
+.btn-yellow:hover {
+  background-color:rgb(254,242,122);
+  color: white;
+font-weight: bold;
+}
+    #invisivel{
+      display: none;
+    }
+    #visivel{
+      font-style: italic;
+      font-size: 30px;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoVisivel{
+      font-style: italic;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoSair{
+      display: none;
+    }
+    .input{
+      background-color: rgb(288,255,181);
+      border: 0px;
+      border-radius: 50px;
+
+    }

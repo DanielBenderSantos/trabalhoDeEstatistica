@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Binomial</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"crossorigin="anonymous">
+	<script src="binomial.js"></script>
+  <link rel="stylesheet" href="probabilidade.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home <span class="fas fa-home"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+        </li>
+        <li>
+    </ul>
+        <span style="right: 0;">
+            <p id="nomeInvisivel" style="float:left;" ></p>
+            <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="index.html" class="btn btn-yellow "> Sair </button>
+            <a> <i class="fas fa-square-root-alt"></i></a>
+        </span>
+      </div>
+    </nav>
+<div>
+    <a href="probabilidadeMenu.html" ><button type="button" class="btn btn-secondary btn-sm btn-block">Voltar</button></a>
+<div class="container-fluid">
+  <br>
+        <h2 style="text-align: center"  >DADOS BINOMIAL</h2>
+        
+        <div class="form-row">
+          <div class="form-group col-md-6">
+		<p>
+        	N <Br>   <input type="number"  class="form-control" id="N">
+		</p>
+		<p>
+        	P <Br>  <input type="number"  class="form-control"  id="P">
+		</p>
+		<p>
+         Q <Br>  <input type="number"  class="form-control"  id="Q">
+    </p>
+    <p>
+          K <Br>  <input type="text"  class="form-control"  id="K"  placeholder="dados separados por ' ; '">
+    </p>
+  
+    </div>
+    </div>
+    <div id="saidasUN"></div>
+      <div class="container-fluid">
+     <h2 style="text-align: center"  >RESULTADOS</h2>
+                   
+    <p id="porcentagem">
+		<p id="media">
+		<p id="DP">
+
+	<p>
+		 <button type="button" class="btn btn-info" onclick="calcula()">Calcular </button>
+  </p>
+</div>
+        
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+    <script src="normal.js"></script>
+    <link rel="stylesheet" href="probabilidade.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"> Home <span class="fas fa-home"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+                        </li>
+                        <li>
+                    </ul>
+                    <span style="right: 0;">
+            <p id="nomeInvisivel" style="float:left;" ></p>
+            <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="index.html" class="btn btn-yellow "> Sair </button>
+            <a> <i class="fas fa-square-root-alt"></i></a>
+        </span>
+                </div>
+            </nav>
+
+            <a href="probabilidadeMenu.html" ><button type="button" class="btn btn-secondary btn-sm btn-block">Voltar</button></a>
+            <div class="container-fluid">
+                <br>
+                    <h2 style="text-align: center"  >DADOS NORMAIS</h2>
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                <p>
+                    Média
+                    <Br> <input type="number" class="form-control" id="media">
+                </p>
+
+                <p>
+                    Desvio padrão
+                    <Br> <input type="number" class="form-control" id="DP">
+                </p>
+
+                <p>
+                    Mais que
+                    <Br> <input type="number" class="form-control" id="maisQue">
+                </p>
+
+                <p>
+                    Menos que
+                    <Br> <input type="number" class="form-control" id="menosQue">
+                </p>
+            </div>
+        </div>
+    
+                <p class="row">
+                        &nbsp;&nbsp;&nbsp;&nbsp; Entre
+                 <br/> <input type="number" class="form-control col-md-2"  id="primeiroEntre"> e
+                  <input type="number" class="form-control col-md-2" id="segundoEntre">
+                </p>
+
+                <p>
+                    <button type="button" class="btn btn-info" onclick="calculaMaisQue()">Calcular Mais Que</button>
+                    <button type="button" class="btn btn-info" onclick="calculaMenosQue()">Calcular Menos Que</button>
+                    <button type="button" class="btn btn-info" onclick="calculaEntre()">Calcular Entre</button>
+
+                </p>
+
+
+                <h2 style="text-align: center"  >RESULTADOS</h2>
+                <p>
+                    <p id="saidaMaisQue">
+                        <p id="saidaMenosQue">
+                            <p id="saidaEntre">
+                            </p>
+            </div>
+
+</body>
+
+</html>

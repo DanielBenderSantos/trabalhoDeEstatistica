@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"  crossorigin="anonymous">
+    <script type="text/javascript" src="logado.js"></script>
+    <link rel="stylesheet" href="descritiva.css">
+
+    <link rel="stylesheet" href="quem_somos.css">
+  </head>
+  <body>
+      <div>
+          <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                          </button>
+  
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html"> Home <span class="fas fa-home"></span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+                      </li>
+                      <li>
+                  </ul>
+                  <span style="right: 0;">
+                      <p id="nomeInvisivel" style="float:left;" ></p>
+                      <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="index.html" class="btn btn-yellow  "> Sair </button>
+                      <a> <i class="fas fa-square-root-alt"></i></a>
+                  </span>
+              </div>
+          </nav>
+      <div class="navbarfluid" id="fundo">
+          <div class="button" id="botao">
+              <a href="index.html"><button type="button" class="btn btn-secondary btn-sm btn-block">Voltar</button></a>
+      <div class="container-fluid">
+          <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="Daniel_Avatar.jpg" alt="" title="Daniel">
+                <div class="card-body">
+                  <h5 class="card-title">Daniel Bender</h5>
+                  <p class="card-text">Membro do projeto, desenvolveu os cálculos da probabilidade, configurou botão de upload de arquivos,     
+                      programou o cadastro de usuário.
+                      <a href="https://github.com/DanielBenderSantos" target="_blank" style="color:black"> <b> github</b></a>
+                    </p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="Luana_Avatar.jpg" alt="" title="Luana">
+                <div class="card-body">
+                  <h5 class="card-title">Luana Ferreira</h5>
+                  <p class="card-text">Membro do projeto, desenvolveu e cuidou do design de todas as telas do Software, testou, desenvolveu a primeira
+                    parte do projeto(Estatística Descritiva), desenvolveu as tabelas do Software e gravou tutoriais
+                    para auxílio dos usuários.
+                    <a href="https://github.com/LuaFly" target="_blank" style="color:black"> <b> github </b></a>
+                  </p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="Vitor_Avatar.jpg" alt="" title="Vítor">
+                <div class="card-body">
+                  <h5 class="card-title">Vítor Faria</h5>
+                  <p class="card-text">Membro do projeto, desenvolveu a primeira parte do projeto, testou, achou bugs,corrigiu alguns bugs
+                    e desenvolveu os gráficos.
+                    <br/>
+                    <a href="https://github.com/KnightV01" target="_blank" style="color:black"> <b> github</b></a>
+                  </p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="Eduardo_Avatar.jpg" alt="" title="Daniel">
+                  <div class="card-body">
+                    <h5 class="card-title">Eduardo Isper</h5>
+                    <p class="card-text">Membro do projeto, participou no desenvolvimento de alguns cálculos na primeira parte
+                        do projeto,testou e ficou encarregado de fazer a documentação do Software de Estatística.
+                        <br/>
+                        <a href="https://github.com/Speer1974" target="_blank" style="color:black"> <b> github</b></a>
+                      </p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="Maria_Rita_Avatar.jpg" alt="" title="Luana">
+                  <div class="card-body">
+                    <h5 class="card-title">Maria Rita</h5>
+                    <p class="card-text">Membro do projeto, ficou encarregada também da documentação,desenhou os avatares da equipe
+                        e desenvolveu a última parte do projeto (Correlação e regressão).
+                      <br/>
+                      <a href="https://github.com/mariaritabelchior" target="_blank" style="color:black"> <b> github </b></a>
+                    </p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="pessoa.jpg" alt="" title="Vítor">
+                  <div class="card-body">
+                    <h5 class="card-title">God</h5>
+                    <p class="card-text">
+                      <br/>
+                      <a href="https://github.com/SamuelSantiagoUFU" target="_blank" style="color:black"> <b> github</b></a>
+                    </p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                  </div>
+                </div>
+              </div> 
+</body>
+</html>

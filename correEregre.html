@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+    <script src="correEregre.js"></script>
+    <link rel="stylesheet" href="descritiva.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"> Home <span class="fas fa-home"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+                            </li>
+                            <li>
+                        </ul>
+                    <span style="right: 0;">
+            <p id="nomeInvisivel" style="float:left;" ></p>
+            <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="index.html" class="btn btn-yellow "> Sair </button>
+            <a> <i class="fas fa-square-root-alt"></i></a>
+        </span>
+                </div>
+            </nav>
+
+            <a href="teste.html" ><button type="button" class="btn btn-secondary btn-sm btn-block">Voltar</button></a>
+            <br/>
+            <div class='container-fluid'> 
+                <br>
+                    <h2 style="text-align: center"  >DADOS CORRELATIVOS E REGRESSIVOS</h2>
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label for="vI">Histórico da variável independente (x)</label>
+                    <input type="text" class="form-control" id="vI" aria-describedby="Variável independente" placeholder="ex: 2;1;0;5">
+                    <!--<span style="position: absolute; right: 18;">
+                      <label class="btn btn-info" for="inputCSV">
+                        <input type="file" class="btn btn-outline-info" onchange="pegaCSV(this)"id="inputCSV" accept=".csv , .txt" style="display: none;">
+                        Escolher arquivo
+                      </label>
+                    </span>-->
+                    <br>
+                    <label for="vD">Histórico da variável dependente (y)</label>
+                    <input type="text" class="form-control" id="vD" aria-describedby="Variável dependente" placeholder="ex: 3;2;1;5">
+                    <span style="position: absolute; right: 18;">
+                      <label class="btn btn-info" for="inputCSV">
+                        <input type="file" class="btn btn-outline-info" onchange="pegaCSV(this)"id="inputCSV" accept=".csv , .txt" style="display: none;">
+                        Escolher arquivo
+                      </label>
+                    </span>
+                    <br><br/> 
+                </div>
+                    Faça uma projeção da variável y ou x de acordo com a equação:
+                </br>---------------------------  y = a * x + b  ---------------------------
+                <br> <input type="number" class="btn btn-outline-info" id="y" placeholder="y"> = a * <input type="number" class="btn btn-outline-info" id="x" placeholder="x"> + b
+</div>
+</div>
+                </br>
+                    <button type="button" class="btn btn-info" onclick="calcularCorreRegre()">Calcular</button> 
+                    <h2 style="text-align: center"  >RESULTADOS</h2>
+                    <br>
+                </div>
+                </div>
+                <div class="container-fluid">
+                <div><div id="saidaCoefiCorre"></div>
+                <br />
+                <div><div id="saidaNivelCorre"></div> 
+                <br />
+                <div><div id="saidaEquacReta"></div>    
+                <br />       
+                <div><div id="saidaProjeFutur"></div>
+                <div class="row container">
+                    <div class="col s12">
+                    <canvas id="myChartcorrela"  style="width: 50%; height: 65%; margin-left:7%"></canvas>               
+                </div>
+</body>
+
+</html>

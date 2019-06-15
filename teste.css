@@ -1,0 +1,80 @@
+body{
+background-color:#e3f2fd;
+overflow: hidden;}
+#fundo{
+      background-color:#e3f2fd;
+    }
+
+   .btn-warning{
+  color: #000;
+  border-radius: 10px;
+  margin-top: 2px;
+  
+}
+.btn-warning:hover {
+  background-color:rgb(222,166,0);
+  color: white;
+
+}
+.btn-secondary{
+width: 98.3%;
+margin-left:0.9%;
+font-size: 15px;
+font-weight: bold;
+
+}
+    #invisivel{
+      display: none;
+    }
+    #visivel{
+      font-style: italic;
+      font-size: 30px;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoVisivel{
+      font-style: italic;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoSair{
+      display: none;
+    }
+.button {
+  display: block;
+  width: 100%;
+  height: calc(100% - 108px);
+  text-align:center;
+}
+.button a {
+width:49%;
+height: 50%;
+text-align:center;
+padding-top: 9%;
+font-size: 32pt;
+}
+.button a:last-child {
+  width: 98.5%;
+  height: 49.5%;
+text-align:center;
+padding-top: 10%;
+}
+ a:link {
+      color: #000000;
+      text-decoration: none;
+    }
+    a{
+      color:#000000;
+    }
+.btn-choice {
+  color: #000;
+}
+.btn-yellow {
+  background-color: rgb(253,255,181);
+  color: #000;
+  border: solid;
+  border-radius: 20px;
+  border-color:rgb(254,242,122);
+}
+.btn-yellow:hover {
+  background-color:rgb(254,242,122);
+  color: white;
+}

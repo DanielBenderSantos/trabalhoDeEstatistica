@@ -1,0 +1,40 @@
+body{
+      background-image:url("fundo2.jpg");
+    }
+
+   .btn-yellow {
+  background-color: rgb(253,255,181);
+  color: #000;
+  border: solid;
+  border-radius: 20px;
+  border-color:rgb(254,242,122);
+}
+.btn-yellow:hover {
+  background-color:rgb(254,242,122);
+  color: white;
+}
+    #invisivel{
+      display: none;
+    }
+    #visivel{
+      font-style: italic;
+      font-size: 30px;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoVisivel{
+      font-style: italic;
+      font-family: Times New Roman, Times, serif;
+    }
+    #botaoSair{
+      display: none;
+    }
+ a:link {
+      color: gainsboro;
+      text-decoration: none;
+    }
+    #fundo{
+      color: #000;
+    }
+    a{
+      color:white;
+    }ecoration: none;

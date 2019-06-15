@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <meta charset="UTF-8"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="cadastro.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+    <script type="text/javascript" src="cadastro.js" ></script>
+    <link rel="stylesheet" href="teste1.css">
+
+</head>
+
+ <body>
+  <div>
+    <nav class="navbar navbar-expand-md navbar navbar-light" style="background-color: #e3f2fd;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-bars"></i>Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teste1.html"> Home <span class="fas fa-home"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quem_somos.html">Quem somos <span class="far fa-address-card"></span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="ajuda_cadastro.html" target="_new">Ajuda em video<span class="far fa-question-circle"></span></a>
+          </li>
+      <li>
+        <a href="cadastro.html" class="btn btn-yellow">Cadastrar-se</a> 
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <input type="text" id="emailLogin" class="input mr-2" placeholder="   Email">
+        <input type="password" id="senhaLogin" class="input mr-2" placeholder="   Senha">
+        <button id="botaoLogar" onclick="logar()" class="btn-yellow my-2 my-sm-0" type="button">Logar</button>
+        </form>
+        <span style="right: 0;">
+            <p id="nomeInvisivel" style="float:left;" ></p>
+            <button style="margin-left: 15px" id="botaoSair" onclick="sair(value)" value="teste1.html" class="btn btn-yellow "> Sair </button>
+            <a> <i class="fas fa-square-root-alt"></i></a>
+        </span>
+      </div>
+    </nav>
+    <div id="body">
+      <div class="w-100 divimagem">
+        <div class="text-center w-100">
+          <h1> Trabalho de estatística</h1>
+          <p> O objetivo desse trabalho é: Agilizar as demonstrações de calculos estátiscos, tais como <br />estatistica descritiva, probabilidade e correlação e regressão. Também nos ajudar como alunos <br /> a fazer um software verdadeiro que será usado no dia-a-dia, nos dando uma visão do que é e   <br /> de como é o real trabalho em grupo e principalmente as dificuldades do mundo da tecnologia. </p>
+            <button onclick="iniciar(value)" value="teste.html" class="btn btn-outline-info"> Iniciar </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
